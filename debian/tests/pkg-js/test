@@ -1,0 +1,3 @@
+coffee -c test/test.coffee
+mocha
+rm -f test/test.js
