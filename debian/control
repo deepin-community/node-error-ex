@@ -4,14 +4,13 @@ Uploaders: Pirate Praveen <praveen@debian.org>
 Section: javascript
 Testsuite: autopkgtest-pkg-nodejs
 Priority: optional
-Build-Depends: debhelper-compat (= 12),
+Build-Depends: debhelper-compat (= 13),
                coffeescript <!nocheck>,
                mocha <!nocheck>,
                node-is-arrayish <!nocheck>,
                node-should <!nocheck>,
-               nodejs,
-               pkg-js-tools (>= 0.8.10)
-Standards-Version: 4.5.0
+               dh-sequence-nodejs
+Standards-Version: 4.6.0
 Vcs-Browser: https://salsa.debian.org/js-team/node-error-ex
 Vcs-Git: https://salsa.debian.org/js-team/node-error-ex.git
 Homepage: https://github.com/qix-/node-error-ex#readme
@@ -20,7 +19,7 @@ Rules-Requires-Root: no
 Package: node-error-ex
 Architecture: all
 Depends: ${misc:Depends},
-         nodejs,
          node-is-arrayish
+Multi-Arch: foreign
 Description: easy error subclassing and stack customization
  Node.js is an event-based server-side JavaScript engine.
